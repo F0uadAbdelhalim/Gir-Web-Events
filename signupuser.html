@@ -10,7 +10,7 @@
   <body>
     <header>
       <div class="row justify-content-between">
-        <div class="col-lg-4">
+        <div class="col-lg-4 d-none d-md-block">
           <img
             src="imgs/signup.webp"
             alt="childern"
@@ -22,33 +22,39 @@
           <div class="mb-3">
             <img src="imgs/logo.svg" class="img-fluid" alt="brand logo" />
           </div>
-          <form class="form">
+          <form class="form p-2">
             <h2 class="text-primary h2 mb-3">Register</h2>
             <p class="lead mb-5">Welcome, register to join our community</p>
             <div class="row mb-4">
               <div class="col-6">
                 <input
                   type="text"
-                  class="form-control rounded remove"
+                  class="form-control rounded-5 bg-secondary border-0"
                   placeholder="First Name"
                 />
               </div>
               <div class="col-6">
                 <input
                   type="text"
-                  class="form-control rounded"
+                  class="form-control rounded rounded-5 bg-secondary border-0"
                   placeholder="Last Name"
                 />
               </div>
             </div>
-            <input type="email" placeholder="Email" class="form-control mb-3" />
+            <input
+              type="email"
+              placeholder="Email"
+              class="form-control mb-3 border-0 rounded-5 bg-secondary"
+            />
             <div class="input-group align-items-start password">
               <input
                 type="password"
                 placeholder="Password"
-                class="form-control mb-3 p-2"
+                class="form-control mb-3 p-2 rounded-start-5 bg-secondary border-0"
               />
-              <button class="btn text-primary border p-2">
+              <button
+                class="btn text-primary p-2 pe-3 border-0 bg-secondary rounded-end-5"
+              >
                 <img
                   src="imgs/show_pass_icon.svg"
                   class="img-fluid"
@@ -60,9 +66,11 @@
               <input
                 type="password"
                 placeholder="Re-Password"
-                class="form-control mb-3 p-2"
+                class="form-control mb-3 p-2 rounded-start-5 bg-secondary border-0"
               />
-              <button class="btn text-primary border p-2">
+              <button
+                class="btn text-primary p-2 pe-3 border-0 bg-secondary rounded-end-5"
+              >
                 <img
                   src="imgs/show_pass_icon.svg"
                   class="img-fluid"
@@ -72,7 +80,11 @@
             </div>
             <div class="input-group">
               <!-- country codes (ISO 3166) and Dial codes. -->
-              <select name="countryCode" class="form-control" id="">
+              <select
+                name="countryCode"
+                class="form-control rounded-start-5 bg-secondary border-0"
+                id=""
+              >
                 <option data-countryCode="GB" value="44" selected>
                   UK (+44)
                 </option>
@@ -664,14 +676,19 @@
               </select>
               <input
                 type="text"
-                class="form-control rounded-end w-50"
+                class="form-control w-50 rounded-end-5 bg-secondary border-0"
                 placeholder="Phone Number"
               />
             </div>
             <label for="type" class="form-label fw-bold mt-3"
               >Account Type
             </label>
-            <select id="type" name="type" id="type" class="form-select">
+            <select
+              id="type"
+              name="type"
+              id="type"
+              class="form-select rounded-5 bg-secondary border-0"
+            >
               <option value="Individual providers" selected>
                 Individual service providers
               </option>
@@ -685,7 +702,7 @@
                 id="id"
                 type="text"
                 placeholder="Admin "
-                class="form-control"
+                class="form-control rounded-5 bg-secondary border-0"
               />
               <label for="id" class="d-block text-bg-primary p-2 rounded-end"
                 >22222</label
@@ -693,12 +710,12 @@
             </div>
             <input
               type="text"
-              class="form-control rounded mt-3 d-none account"
+              class="form-control rounded mt-3 d-none account rounded-5 bg-secondary border-0"
               placeholder="Account Business Name"
             />
             <input
               type="text"
-              class="form-control rounded mt-3 website d-none"
+              class="form-control rounded mt-3 website d-none rounded-5 bg-secondary border-0"
               placeholder="Website "
             />
             <div
@@ -707,9 +724,11 @@
               <input
                 type="password"
                 placeholder="Password"
-                class="form-control p-2"
+                class="form-control p-2 rounded-start-5 bg-secondary border-0"
               />
-              <button class="btn text-primary border p-2">
+              <button
+                class="btn text-primary p-2 pe-3 border-0 bg-secondary rounded-end-5"
+              >
                 <img
                   src="imgs/show_pass_icon.svg"
                   class="img-fluid"
@@ -723,9 +742,11 @@
               <input
                 type="password"
                 placeholder="Re-Password"
-                class="form-control p-2"
+                class="form-control p-2 rounded-start-5 bg-secondary border-0"
               />
-              <button class="btn text-primary border p-2">
+              <button
+                class="btn text-primary p-2 pe-3 border-0 bg-secondary rounded-end-5"
+              >
                 <img
                   src="imgs/show_pass_icon.svg"
                   class="img-fluid"
