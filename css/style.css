@@ -186,13 +186,13 @@ body {
   height: auto; /* Ensures the image retains its aspect ratio */
 }
 
-.splide__arrow--next {
+.arr__next {
   padding: 1rem 2rem !important;
   position: absolute;
   bottom: 20%;
 }
 
-.splide__arrow--prev {
+.arr__prev {
   background-color: transparent !important;
   margin-left: 2rem;
   position: absolute;
