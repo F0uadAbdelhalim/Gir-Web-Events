@@ -106,12 +106,22 @@ body {
   top: 45% !important;
 }
 
-.w-85 {
-  width: 85% !important;
+.w-90 {
+  width: 90% !important;
+}
+
+.w-165 {
+  width: 165% !important;
 }
 
 .ls-5 {
   letter-spacing: -0.5px !important;
+}
+
+.robot {
+  background-image: url("../imgs/bgrobot.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media only screen and (max-width: 62em) {

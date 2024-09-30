@@ -107,13 +107,35 @@ body {
   top: 45% !important;
 }
 
-.w-85 {
-  width: 85% !important;
+.w-90 {
+  width: 90% !important;
 }
+
+.w-165 {
+  width: 165% !important;
+}
+
+// .robot__img::after {
+//   content: "";
+//   position: absolute;
+//   width: 233px;
+//   height: 233px;
+//   border-radius: 50%;
+//   background-color: $primary;
+//   bottom: 0;
+//   left: 0;
+// }
 
 .ls-5 {
   letter-spacing: -0.5px !important;
 }
+
+.robot {
+  background-image: url("../imgs/bgrobot.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @media only screen and (max-width: 62em) {
   .navbar-nav .nav-item:not(:last-child) {
     border-right: none;

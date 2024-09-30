@@ -5,6 +5,14 @@ const companyIdInput = document.querySelector(".companyId");
 const companyWebsite = document.querySelector(".website");
 const account = document.querySelector(".account");
 
+var splide = new Splide(".splide", {
+  type: "loop",
+  perPage: 4,
+  perMove: 1,
+});
+
+splide.mount();
+
 select.addEventListener("change", function (e) {
   const selected = e.target.value;
 
