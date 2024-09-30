@@ -27,6 +27,7 @@ body {
 }
 
 .dot {
+  cursor: pointer;
   height: 17px;
   width: 17px;
   background-color: #fff;
@@ -67,7 +68,52 @@ body {
 .fs-12 {
   font-size: 12px;
 }
+.fs-10 {
+  font-size: 10px;
+}
+.wedding {
+  background-image: linear-gradient(
+      82.27deg,
+      rgba(37, 37, 37, 0.73) 30.68%,
+      rgba(139, 139, 139, 0) 92.7%
+    ),
+    url("../imgs/weddding.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+}
 
+.line {
+  height: 2px;
+  width: 15px;
+}
+.right {
+  z-index: 3;
+}
+.right::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #931158;
+  border-radius: 50rem;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.top-45 {
+  top: 45% !important;
+}
+
+.w-85 {
+  width: 85% !important;
+}
+
+.ls-5 {
+  letter-spacing: -0.5px !important;
+}
 @media only screen and (max-width: 62em) {
   .navbar-nav .nav-item:not(:last-child) {
     border-right: none;
