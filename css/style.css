@@ -214,6 +214,9 @@ body {
   .overlay__content {
     width: 80% !important;
   }
+  .w-165 {
+    width: 120% !important;
+  }
 }
 @media only screen and (max-width: 36em) {
   .hero__content {
@@ -222,6 +225,11 @@ body {
   }
   .overlay__content {
     width: 100% !important;
+  }
+  .w-165 {
+    width: 115% !important;
+    height: 15% !important;
+    margin-left: -3rem;
   }
 }
 /* footer */
