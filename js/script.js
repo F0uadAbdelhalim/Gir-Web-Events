@@ -5,6 +5,8 @@ const companyIdInput = document.querySelector(".companyId");
 const companyWebsite = document.querySelector(".website");
 const account = document.querySelector(".account");
 
+//////////////////////////////////////////////
+//// Make the slider works with splide
 try {
   const splideTrindsOne = new Splide(".trinds__slider--one", {
     type: "loop",
@@ -61,6 +63,25 @@ try {
 
   splideTrindsThree.mount();
 
+  const splideServicesOne = new Splide(".services__slider--one", {
+    type: "loop",
+    perPage: 5, // Default for large screens
+    perMove: 1, // Moves one slide at a time
+
+    breakpoints: {
+      // Bootstrap's medium screen size (768px and below)
+      768: {
+        perPage: 2, // Show 2 slides on medium screens
+      },
+      // Bootstrap's small screen size (576px and below)
+      576: {
+        perPage: 1, // Show 1 slide on smaller screens
+      },
+    },
+  });
+
+  splideServicesOne.mount();
+
   var splide = new Splide(".progress", {
     pagination: false,
   });
@@ -76,7 +97,8 @@ try {
   splide.mount();
 
   //////////////////////////////////////////////
-  //// toggle
+  //// toggle overlay and progress box
+
   const btnStart = document.querySelector(".start__planning");
   const overlay = document.querySelector(".overlay");
   const overlayContent = document.querySelector(".overlay__content");
@@ -96,12 +118,113 @@ try {
     overlay.classList.toggle("visually-hidden");
     overlayContent.classList.toggle("visually-hidden");
   });
+
+  //////////////////////////////////////////
+  ///// progress budget and guests
+  const rangeInput = document.getElementById("range");
+  const circle = document.getElementById("circle");
+
+  // Function to update the position of the circle element
+  function updateCirclePosition() {
+    const rangeValue = rangeInput.value;
+    const max = rangeInput.max;
+    const min = rangeInput.min;
+
+    // Calculate the percentage of the current value relative to the max/min range
+    const percentage = ((rangeValue - min) / (max - min)) * 100;
+
+    // Update the content of the circle
+    circle.textContent = rangeValue;
+
+    // Move the circle element above the thumb
+    const thumbOffset = (rangeInput.offsetWidth * percentage) / 100 - 15; // Center the circle
+    circle.style.transform = `translateX(${thumbOffset}px)`;
+  }
+
+  // Update position on input change
+  rangeInput.addEventListener("change", updateCirclePosition);
+
+  // Initial update when page loads
+  updateCirclePosition();
+
+  /////////////////////////////////////////
+  ///// progress budget and guests
+  const rangeInputTwo = document.querySelector(".range--2");
+  const circleTwo = document.querySelector(".circle--2");
+
+  console.log(rangeInputTwo, circleTwo);
+
+  // Function to update the position of the circleTwo element
+  function updatecircleTwoPosition() {
+    const rangeValue = rangeInputTwo.value;
+    const max = rangeInputTwo.max;
+    const min = rangeInputTwo.min;
+
+    // Calculate the percentage of the current value relative to the max/min range
+    const percentage = ((rangeValue - min) / (max - min)) * 100;
+
+    // Update the content of the circleTwo
+    circleTwo.textContent = rangeValue;
+
+    // Move the circleTwo element above the thumb
+    const thumbOffset = (rangeInputTwo.offsetWidth * percentage) / 100 - 15; // Center the circleTwo
+    circleTwo.style.transform = `translateX(${thumbOffset}px)`;
+  }
+
+  // Update position on input change
+  rangeInputTwo.addEventListener("change", updatecircleTwoPosition);
+
+  // Initial update when page loads
+  updatecircleTwoPosition();
+
+  ////////////////////////////////////////
+  //////// Conditionally show the main and search results and search empty
+
+  const mainContent = document.querySelector(".main__content");
+  const searchResults = document.querySelector(".search__results");
+  const searchEmpty = document.querySelector(".search__empty");
+  const formNav = document.querySelector(".form__nav");
+  const formNavInput = document.querySelector(".form__nav--input");
+  const homeMain = document.querySelectorAll(".home__main");
+
+  formNav.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const searchValue = formNavInput.value;
+    console.log(searchValue);
+    if (searchValue !== "") {
+      searchResults.classList.remove("d-none");
+      searchEmpty.classList.add("d-none");
+      mainContent.classList.add("d-none");
+    } else if (searchValue === "") {
+      console.log("cart is empty!!!");
+      searchResults.classList.add("d-none");
+      searchEmpty.classList.remove("d-none");
+      mainContent.classList.add("d-none");
+    }
+  });
+
+  homeMain.forEach((el) => {
+    el.addEventListener("click", function () {
+      searchResults.classList.add("d-none");
+      searchEmpty.classList.add("d-none");
+      mainContent.classList.remove("d-none");
+    });
+  });
+
+  ////////////////////////////////////////
+  //// toggle vendours
+  const vendours = document.querySelector(".vendours");
+  console.log(vendours);
+  vendours.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("col")) return;
+    e.target.classList.toggle("btn-primary");
+  });
 } catch (error) {
   console.log(error.message);
 }
 
 ////////////////////////////////////////
-
+//////// for sign up selection
 select.addEventListener("change", function (e) {
   const selected = e.target.value;
 
