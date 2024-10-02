@@ -96,6 +96,29 @@ try {
 
   splide.mount();
 
+  var splide = new Splide(".hero__splide", {
+    type: "loop",
+    autoplay: true,
+    interval: 2000,
+    arrows: false,
+    pagination: false,
+    speed: 2000,
+    easing: "cubic-bezier(0.25, 1, 0.5, 1)",
+    direction: "ltr",
+  });
+  splide.mount();
+  var splide = new Splide(".wedding__splide", {
+    type: "loop",
+    autoplay: true,
+    interval: 2000,
+    arrows: false,
+    pagination: false,
+    speed: 2000,
+    easing: "cubic-bezier(0.25, 1, 0.5, 1)",
+    direction: "ltr",
+  });
+  splide.mount();
+
   //////////////////////////////////////////////
   //// toggle overlay and progress box
 
@@ -224,6 +247,21 @@ try {
       event.classList.toggle("btn-primary-light");
     });
   });
+
+  const hallContainer = document.querySelectorAll(".hall__container");
+  const hallInputs = document.querySelectorAll(".hall__input");
+  console.log(hallInputs);
+  hallContainer.forEach((hall) => {
+    hall.addEventListener("click", function (e) {
+      console.log(e.target);
+      if (!e.target.classList.contains("hall__input")) return;
+      hallInputs.forEach((input) => {
+        input.classList.remove("btn-primary");
+        console.log("btn primary removed");
+      });
+      e.target.classList.add("btn-primary");
+    });
+  });
 } catch (error) {
   console.log(error.message);
 }
@@ -245,19 +283,19 @@ select.addEventListener("change", function (e) {
     companyWebsite.classList.remove("d-none");
   } else if (selected == "user") {
     passwordInput.forEach((input) => {
-      input.classList.add("d-none");
+      input.classList.remove("d-none");
     });
     providerPassowrd.forEach((input) => {
-      input.classList.remove("d-none");
+      input.classList.add("d-none");
     });
     companyIdInput.classList.add("d-none");
     companyWebsite.classList.add("d-none");
   } else {
     passwordInput.forEach((input) => {
-      input.classList.remove("d-none");
+      input.classList.add("d-none");
     });
     providerPassowrd.forEach((input) => {
-      input.classList.add("d-none");
+      input.classList.remove("d-none");
     });
     companyIdInput.classList.add("d-none");
     companyWebsite.classList.add("d-none");

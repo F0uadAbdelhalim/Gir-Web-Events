@@ -125,20 +125,50 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     </div>
     <main class="bg-main main__content">
       <section class="hero position-relative mb-9">
-        <div>
-          <img
-            src="imgs/hero.webp"
-            alt="hero image"
-            class="img-fluid w-100 hero__img"
-          />
-        </div>
-        <div class="dots position-absolute end-0 top-50 translate-middle-y">
+        <section
+          class="splide hero__splide"
+          aria-label="Splide Basic HTML Example"
+        >
+          <div class="splide__track">
+            <ul class="splide__list gap-2">
+              <li class="splide__slide">
+                <div>
+                  <img
+                    src="imgs/hero.webp"
+                    alt="hero image"
+                    class="img-fluid w-100 hero__img"
+                  />
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div>
+                  <img
+                    src="imgs/hero.webp"
+                    alt="hero image"
+                    class="img-fluid w-100 hero__img"
+                  />
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div>
+                  <img
+                    src="imgs/hero.webp"
+                    alt="hero image"
+                    class="img-fluid w-100 hero__img"
+                  />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- <div class="dots position-absolute end-0 top-50 translate-middle-y">
           <ul class="d-flex flex-column gap-3 me-4">
             <li class="dot"></li>
             <li class="dot"></li>
             <li class="dot active"></li>
           </ul>
-        </div>
+        </div> -->
         <div
           class="w-50 position-absolute py-1 px-2 py-lg-4 px-lg-6 text-center bottom-0 start-50 bg-white hero__content rounded-3 align-self-center shadow-lg"
         >
@@ -155,6 +185,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
           </button>
         </div>
       </section>
+
       <section class="most_requested mb-5 position-relative">
         <img
           src="imgs/blue-balloon-png-image-2400.png"
@@ -388,69 +419,233 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
           </button>
         </div>
       </section>
-      <section class="wedding p-2 mt-5 mb-6 position-relative">
-        <div
-          class="position-absolute mb-4 d-flex gap-2 bottom-0 start-50 translate-middle-y"
-        >
-          <span class="line bg-primary"></span>
-          <span class="line bg-white"></span><span class="line bg-white"></span>
-        </div>
-        <div class="container mt-6">
-          <div class="d-flex justify-content-between flex-wrap">
-            <div class="d-flex flex-column">
-              <h2 class="text-white display-6 fw-medium">Wedding packages</h2>
-              <ul
-                class="d-flex flex-column gap-2 text-white list-unstyled fm-cairo fs-14"
-              >
-                <li>
-                  <span class="right position-relative"
-                    ><img src="imgs/rightprimary.svg" alt="right check"
-                  /></span>
-                  DJ and Music
-                </li>
 
-                <li>
-                  <span class="right position-relative"
-                    ><img src="imgs/rightprimary.svg" alt="right check"
-                  /></span>
-                  Balloons and Decorations
-                </li>
-                <li>
-                  <span class="right position-relative"
-                    ><img src="imgs/rightprimary.svg" alt="right check"
-                  /></span>
-                  Cake and Sweets
-                </li>
-                <li>
-                  <span class="right position-relative"
-                    ><img src="imgs/rightprimary.svg" alt="right check"
-                  /></span>
-                  Food and Drinks
-                </li>
-                <li>
-                  <span class="right position-relative"
-                    ><img src="imgs/rightprimary.svg" alt="right check"
-                  /></span>
-                  Party Favors
-                </li>
-              </ul>
-              <p class="text-white fm-cairo fw-medium">
-                providers: sick rose compay <br />
-                sates from: 100.3 $
-              </p>
+      <section
+        class="splide wedding__splide"
+        aria-label="Splide Basic HTML Example"
+      >
+        <div class="splide__track">
+          <ul class="splide__list gap-2">
+            <li class="splide__slide">
+              <section class="wedding w-100 p-2 mt-5 mb-6 position-relative">
+                <div
+                  class="position-absolute mb-4 d-flex gap-2 bottom-0 start-50 translate-middle-y"
+                >
+                  <span class="line bg-primary"></span>
+                  <span class="line bg-white"></span
+                  ><span class="line bg-white"></span>
+                </div>
+                <div class="container mt-6">
+                  <div class="d-flex justify-content-between flex-wrap">
+                    <div class="d-flex flex-column">
+                      <h2 class="text-white display-6 fw-medium">
+                        Wedding packages
+                      </h2>
+                      <ul
+                        class="d-flex flex-column gap-2 text-white list-unstyled fm-cairo fs-14"
+                      >
+                        <li>
+                          <span class="right position-relative"
+                            ><img src="imgs/rightprimary.svg" alt="right check"
+                          /></span>
+                          DJ and Music
+                        </li>
 
-              <button
-                class="align-self-center mb-4 btn btn-primary rounded-5 fm-cairo py-2 px-5"
-              >
-                order now
-              </button>
-            </div>
-            <div>
-              <img src="imgs/party.webp" alt="party" class="img-fluid" />
-            </div>
-          </div>
+                        <li>
+                          <span class="right position-relative"
+                            ><img src="imgs/rightprimary.svg" alt="right check"
+                          /></span>
+                          Balloons and Decorations
+                        </li>
+                        <li>
+                          <span class="right position-relative"
+                            ><img src="imgs/rightprimary.svg" alt="right check"
+                          /></span>
+                          Cake and Sweets
+                        </li>
+                        <li>
+                          <span class="right position-relative"
+                            ><img src="imgs/rightprimary.svg" alt="right check"
+                          /></span>
+                          Food and Drinks
+                        </li>
+                        <li>
+                          <span class="right position-relative"
+                            ><img src="imgs/rightprimary.svg" alt="right check"
+                          /></span>
+                          Party Favors
+                        </li>
+                      </ul>
+                      <p class="text-white fm-cairo fw-medium">
+                        providers: sick rose compay <br />
+                        sates from: 100.3 $
+                      </p>
+
+                      <button
+                        class="align-self-center mb-4 btn btn-primary rounded-5 fm-cairo py-2 px-5"
+                      >
+                        order now
+                      </button>
+                    </div>
+                    <div>
+                      <img
+                        src="imgs/party.webp"
+                        alt="party"
+                        class="img-fluid"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </li>
+            <li class="splide__slide">
+              <section class="wedding w-100 p-2 mt-5 mb-6 position-relative">
+                <div
+                  class="position-absolute mb-4 d-flex gap-2 bottom-0 start-50 translate-middle-y"
+                >
+                  <span class="line bg-primary"></span>
+                  <span class="line bg-white"></span
+                  ><span class="line bg-white"></span>
+                </div>
+                <div class="container mt-6">
+                  <div class="d-flex justify-content-between flex-wrap">
+                    <div class="d-flex flex-column">
+                      <h2 class="text-white display-6 fw-medium">
+                        Wedding packages
+                      </h2>
+                      <ul
+                        class="d-flex flex-column gap-2 text-white list-unstyled fm-cairo fs-14"
+                      >
+                        <li>
+                          <span class="right position-relative"
+                            ><img src="imgs/rightprimary.svg" alt="right check"
+                          /></span>
+                          DJ and Music
+                        </li>
+
+                        <li>
+                          <span class="right position-relative"
+                            ><img src="imgs/rightprimary.svg" alt="right check"
+                          /></span>
+                          Balloons and Decorations
+                        </li>
+                        <li>
+                          <span class="right position-relative"
+                            ><img src="imgs/rightprimary.svg" alt="right check"
+                          /></span>
+                          Cake and Sweets
+                        </li>
+                        <li>
+                          <span class="right position-relative"
+                            ><img src="imgs/rightprimary.svg" alt="right check"
+                          /></span>
+                          Food and Drinks
+                        </li>
+                        <li>
+                          <span class="right position-relative"
+                            ><img src="imgs/rightprimary.svg" alt="right check"
+                          /></span>
+                          Party Favors
+                        </li>
+                      </ul>
+                      <p class="text-white fm-cairo fw-medium">
+                        providers: sick rose compay <br />
+                        sates from: 100.3 $
+                      </p>
+
+                      <button
+                        class="align-self-center mb-4 btn btn-primary rounded-5 fm-cairo py-2 px-5"
+                      >
+                        order now
+                      </button>
+                    </div>
+                    <div>
+                      <img
+                        src="imgs/party.webp"
+                        alt="party"
+                        class="img-fluid"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </li>
+            <li class="splide__slide">
+              <section class="wedding w-100 p-2 mt-5 mb-6 position-relative">
+                <div
+                  class="position-absolute mb-4 d-flex gap-2 bottom-0 start-50 translate-middle-y"
+                >
+                  <span class="line bg-primary"></span>
+                  <span class="line bg-white"></span
+                  ><span class="line bg-white"></span>
+                </div>
+                <div class="container mt-6">
+                  <div class="d-flex justify-content-between flex-wrap">
+                    <div class="d-flex flex-column">
+                      <h2 class="text-white display-6 fw-medium">
+                        Wedding packages
+                      </h2>
+                      <ul
+                        class="d-flex flex-column gap-2 text-white list-unstyled fm-cairo fs-14"
+                      >
+                        <li>
+                          <span class="right position-relative"
+                            ><img src="imgs/rightprimary.svg" alt="right check"
+                          /></span>
+                          DJ and Music
+                        </li>
+
+                        <li>
+                          <span class="right position-relative"
+                            ><img src="imgs/rightprimary.svg" alt="right check"
+                          /></span>
+                          Balloons and Decorations
+                        </li>
+                        <li>
+                          <span class="right position-relative"
+                            ><img src="imgs/rightprimary.svg" alt="right check"
+                          /></span>
+                          Cake and Sweets
+                        </li>
+                        <li>
+                          <span class="right position-relative"
+                            ><img src="imgs/rightprimary.svg" alt="right check"
+                          /></span>
+                          Food and Drinks
+                        </li>
+                        <li>
+                          <span class="right position-relative"
+                            ><img src="imgs/rightprimary.svg" alt="right check"
+                          /></span>
+                          Party Favors
+                        </li>
+                      </ul>
+                      <p class="text-white fm-cairo fw-medium">
+                        providers: sick rose compay <br />
+                        sates from: 100.3 $
+                      </p>
+
+                      <button
+                        class="align-self-center mb-4 btn btn-primary rounded-5 fm-cairo py-2 px-5"
+                      >
+                        order now
+                      </button>
+                    </div>
+                    <div>
+                      <img
+                        src="imgs/party.webp"
+                        alt="party"
+                        class="img-fluid"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </li>
+          </ul>
         </div>
       </section>
+
       <section class="best_shop mb-6 position-relative">
         <!-- <img
         src="imgs/arr-left.svg"
@@ -1747,9 +1942,13 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             <li class="splide__slide">
               <div>
                 <h3 class="text-dark">Do you have a hall?</h3>
-                <div class="d-flex gap-2">
-                  <button class="form-control">yes</button>
-                  <button class="form-control">no</button>
+                <div class="d-flex gap-2 hall__container">
+                  <button class="hall__input border form-control btn">
+                    yes
+                  </button>
+                  <button class="hall__input border form-control btn">
+                    no
+                  </button>
                 </div>
               </div>
             </li>

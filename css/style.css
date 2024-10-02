@@ -119,8 +119,13 @@ body {
   z-index: -1;
 }
 
+.hall__input:hover {
+  color: white !important;
+  background-color: #931158 !important;
+}
+
 .top-54 {
-  top: 54% !important;
+  top: 45% !important;
 }
 
 .w-90 {
@@ -289,8 +294,8 @@ body {
 }
 @media only screen and (max-width: 36em) {
   .hero__content {
-    width: 100% !important;
-    transform: translate(-50%, 85%);
+    width: 95% !important;
+    transform: translate(-50%, 100%);
   }
   .overlay__content {
     width: 100% !important;
@@ -302,6 +307,9 @@ body {
   }
   .add__tofav {
     left: 85%;
+  }
+  .mb-9 {
+    margin-bottom: 20rem !important;
   }
 }
 .bg-main {
