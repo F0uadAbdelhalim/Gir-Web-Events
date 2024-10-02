@@ -170,6 +170,14 @@ body {
   content: "100$";
 }
 
+.btn-primary-light {
+  background-color: rgba(147, 17, 88, 0.5490196078);
+}
+
+.events {
+  cursor: pointer;
+}
+
 .circle {
   content: attr(data-value);
   position: absolute;

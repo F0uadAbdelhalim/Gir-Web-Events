@@ -217,6 +217,13 @@ try {
     if (!e.target.classList.contains("col")) return;
     e.target.classList.toggle("btn-primary");
   });
+
+  const events = document.querySelectorAll(".events");
+  events.forEach((event) => {
+    event.addEventListener("click", function () {
+      event.classList.toggle("btn-primary-light");
+    });
+  });
 } catch (error) {
   console.log(error.message);
 }
