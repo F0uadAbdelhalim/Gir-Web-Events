@@ -263,3 +263,6 @@ select.addEventListener("change", function (e) {
     companyWebsite.classList.add("d-none");
   }
 });
+
+//////////////////////////////////////////
+/// // payment page
