@@ -152,8 +152,6 @@ try {
   const rangeInputTwo = document.querySelector(".range--2");
   const circleTwo = document.querySelector(".circle--2");
 
-  console.log(rangeInputTwo, circleTwo);
-
   // Function to update the position of the circleTwo element
   function updatecircleTwoPosition() {
     const rangeValue = rangeInputTwo.value;
@@ -164,7 +162,7 @@ try {
     const percentage = ((rangeValue - min) / (max - min)) * 100;
 
     // Update the content of the circleTwo
-    circleTwo.textContent = rangeValue;
+    circleTwo.textContent = rangeValue + "$";
 
     // Move the circleTwo element above the thumb
     const thumbOffset = (rangeInputTwo.offsetWidth * percentage) / 100 - 15; // Center the circleTwo
