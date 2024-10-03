@@ -126,22 +126,34 @@ try {
   const overlay = document.querySelector(".overlay");
   const overlayContent = document.querySelector(".overlay__content");
   const btnClose = document.querySelector(".close");
-  const addPackage = document.querySelector(".add__package");
+  const addPackage = document.querySelectorAll(".add__package");
   const arrangement = document.querySelector(".arrangemet");
   const btnCloseArrangement = document.querySelector(".close__arrangement");
 
-  btnStart.addEventListener("click", function () {
+  addPackage?.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      overlay.classList.toggle("visually-hidden");
+      arrangement.classList.toggle("visually-hidden");
+    });
+  });
+
+  btnCloseArrangement?.addEventListener("click", function () {
+    overlay.classList.toggle("visually-hidden");
+    arrangement.classList.toggle("visually-hidden");
+  });
+
+  btnStart?.addEventListener("click", function () {
     overlay.classList.toggle("visually-hidden");
     overlayContent.classList.toggle("visually-hidden");
   });
 
-  overlay.addEventListener("click", function () {
+  overlay?.addEventListener("click", function () {
     overlay.classList.toggle("visually-hidden");
     overlayContent.classList.add("visually-hidden");
     arrangement.classList.add("visually-hidden");
   });
 
-  btnClose.addEventListener("click", function () {
+  btnClose?.addEventListener("click", function () {
     overlay.classList.toggle("visually-hidden");
     overlayContent.classList.toggle("visually-hidden");
   });
@@ -169,7 +181,7 @@ try {
   }
 
   // Update position on input change
-  rangeInput.addEventListener("change", updateCirclePosition);
+  rangeInput?.addEventListener("change", updateCirclePosition);
 
   // Initial update when page loads
   updateCirclePosition();
@@ -197,7 +209,7 @@ try {
   }
 
   // Update position on input change
-  rangeInputTwo.addEventListener("change", updatecircleTwoPosition);
+  rangeInputTwo?.addEventListener("change", updatecircleTwoPosition);
 
   // Initial update when page loads
   updatecircleTwoPosition();
@@ -212,7 +224,7 @@ try {
   const formNavInput = document.querySelector(".form__nav--input");
   const homeMain = document.querySelectorAll(".home__main");
 
-  formNav.addEventListener("submit", function (e) {
+  formNav?.addEventListener("submit", function (e) {
     e.preventDefault();
     const searchValue = formNavInput.value;
 
@@ -227,7 +239,7 @@ try {
     }
   });
 
-  homeMain.forEach((el) => {
+  homeMain?.forEach((el) => {
     el.addEventListener("click", function () {
       searchResults.classList.add("d-none");
       searchEmpty.classList.add("d-none");
@@ -239,23 +251,23 @@ try {
   //// toggle vendours
   const vendours = document.querySelector(".vendours");
 
-  vendours.addEventListener("click", function (e) {
+  vendours?.addEventListener("click", function (e) {
     if (!e.target.classList.contains("col")) return;
     e.target.classList.toggle("btn-primary");
   });
 
   const events = document.querySelectorAll(".events");
-  events.forEach((event) => {
-    event.addEventListener("click", function () {
-      event.classList.toggle("btn-primary-light");
+  events?.forEach((event) => {
+    event?.addEventListener("click", function () {
+      event?.classList.toggle("btn-primary-light");
     });
   });
 
   const hallContainer = document.querySelectorAll(".hall__container");
   const hallInputs = document.querySelectorAll(".hall__input");
 
-  hallContainer.forEach((hall) => {
-    hall.addEventListener("click", function (e) {
+  hallContainer?.forEach((hall) => {
+    hall?.addEventListener("click", function (e) {
       if (!e.target.classList.contains("hall__input")) return;
       hallInputs.forEach((input) => {
         input.classList.remove("btn-primary");
@@ -269,11 +281,11 @@ try {
   const settings = document.querySelector(".settings");
   const settingsBtn = document.querySelector(".settings__btn");
   const supportContainer = document.querySelector(".support");
-  settingsBtn.addEventListener("click", function () {
+  settingsBtn?.addEventListener("click", function () {
     settings.classList.toggle("appear");
   });
 
-  settings.addEventListener("click", function (e) {
+  settings?.addEventListener("click", function (e) {
     if (e.target.classList.contains("settings__item")) {
       settings.classList.toggle("appear");
     } else if (
@@ -292,18 +304,8 @@ try {
   const filters = document.querySelector(".filters");
   console.log(filterBtn, filters);
 
-  filterBtn.addEventListener("click", function () {
+  filterBtn?.addEventListener("click", function () {
     filters.classList.toggle("visually-hidden");
-  });
-
-  addPackage.addEventListener("click", function () {
-    overlay.classList.toggle("visually-hidden");
-    arrangement.classList.toggle("visually-hidden");
-  });
-
-  btnCloseArrangement.addEventListener("click", function () {
-    overlay.classList.toggle("visually-hidden");
-    arrangement.classList.toggle("visually-hidden");
   });
 } catch (error) {
   console.log(error);
@@ -311,7 +313,7 @@ try {
 
 ////////////////////////////////////////
 //////// for sign up selection
-select.addEventListener("change", function (e) {
+select?.addEventListener("change", function (e) {
   const selected = e.target.value;
 
   if (selected == "Company providers") {
