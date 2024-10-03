@@ -125,6 +125,241 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     </div>
 
     <!-- writes your payment here -->
+    <section class="k-payment bg-main">
+      <div class="container mt-5">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="#">Individual providers</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="#">Providers : sick rose company</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="#">Pay to red package 1193</a>
+            </li>
+          </ol>
+        </nav>
+
+        <!-- Title -->
+        <h1 class="mb-5">Payment page</h1>
+        <!-- Row -->
+        <div class="row align-items-start">
+          <!-- Payment Methods -->
+          <div class="col-md-6 payment-methods">
+            <h2>Choose a payment method</h2>
+
+            <div class="btn-group payment-options" role="group">
+              <button type="button" class="btn" id="ewalletBtn">
+                E-wallet
+                <div class="icon-contain">
+                  <img
+                    src="/imgs/k-bitcoin-card.svg"
+                    alt="walet"
+                    loading="lazy"
+                  />
+                </div>
+              </button>
+              <button type="button" class="btn" id="bankTransferBtn">
+                Bank transfer
+                <div class="icon-contain">
+                  <img src="/imgs/k-bank.svg" alt="bank" loading="lazy" />
+                </div>
+              </button>
+              <button type="button" class="btn active" id="creditCardBtn">
+                Credit card
+                <div class="icon-contain">
+                  <img src="/imgs/k-card-tick.svg" alt="tick" loading="lazy" />
+                </div>
+              </button>
+            </div>
+
+            <!-- E-wallet Form -->
+            <div
+              class="e-wallet-section"
+              id="ewallet-form"
+              style="display: none"
+            >
+              <h2>Choose e-wallet</h2>
+              <div class="e-wallet-options">
+                <label>
+                  <img src="/imgs/k-applepay.png" alt="apple" loading="lazy" />
+                  <input type="radio" name="e-wallet" value="apple-pay" />
+                </label>
+                <label>
+                  <img
+                    src="/imgs/k-googlepay.png"
+                    alt="google"
+                    loading="lazy"
+                  />
+                  <input type="radio" name="e-wallet" value="google-pay" />
+                </label>
+                <label>
+                  Other
+                  <input type="radio" name="e-wallet" value="other" />
+                </label>
+              </div>
+
+              <div class="phone-number">
+                <label for="phone">Phone number</label>
+                <input
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  placeholder="Phone number"
+                />
+              </div>
+            </div>
+
+            <!-- Bank Transfer Form -->
+            <div
+              class="payment-content"
+              id="bank-transfer-form"
+              style="display: none"
+            >
+              <div class="form-group mb-4">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Bank name"
+                />
+              </div>
+              <div class="form-group mb-4">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Account number"
+                />
+              </div>
+              <div class="form-group mb-4">
+                <input
+                  type="text"
+                  class="form-control full-width"
+                  placeholder="IBAN"
+                />
+              </div>
+              <div class="form-group mb-4">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Street, neighborhood, country"
+                />
+              </div>
+              <div class="form-group mb-4 row">
+                <div class="col-6">
+                  <input type="text" class="form-control" placeholder="ZIP" />
+                </div>
+                <div class="col-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Country"
+                  />
+                </div>
+              </div>
+              <a href="#" class="bank-link c-primary">
+                <img src="/imgs/k-banklink.svg" alt="blunk" loading="lazy" />
+                Instructions for completing a bank transfer
+              </a>
+            </div>
+
+            <!-- Credit Card Form (Default) -->
+            <div class="payment-content mt-4" id="credit-card-form">
+              <div class="form-group mb-4">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Name on the card"
+                />
+              </div>
+              <div class="form-group mb-4">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Card number"
+                />
+              </div>
+              <div class="form-group row mb-4">
+                <div class="col-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="CVV code"
+                  />
+                </div>
+                <div class="col-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Expiration date"
+                  />
+                </div>
+              </div>
+              <div class="form-group mb-4">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Street, neighborhood, country"
+                />
+              </div>
+              <div class="form-group row mb-4">
+                <div class="col-6">
+                  <input type="text" class="form-control" placeholder="ZIP" />
+                </div>
+                <div class="col-6">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Country"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Pay Button -->
+            <a
+              type="button"
+              href="orderRecord.html"
+              class="btn btn-primary mt-4"
+              >Pay now</a
+            >
+          </div>
+
+          <!-- Payment Method Images -->
+          <div class="payment-images col-md-6">
+            <!-- Image for Credit Card -->
+            <img
+              id="creditCardImage1"
+              src="/imgs/k-cards.png"
+              class="img-fluid"
+              alt="Credit Card Front"
+              style="display: block"
+            />
+            <img
+              id="creditCardImage2"
+              src="/imgs/k-accountcard.png"
+              class="img-fluid"
+              alt="Credit Card Back"
+              style="display: block"
+            />
+
+            <!-- Default Image (For other methods) -->
+            <img
+              id="paymentImage"
+              src="default-payment.jpg"
+              class="img-fluid"
+              alt="Payment Image"
+              style="display: none"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- Elicips -->
+      <div class="circle-1"></div>
+      <div class="circle-2"></div>
+    </section>
 
     <footer>
       <div class="footer-container">
@@ -202,6 +437,6 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     </footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/payment.js"></script>
   </body>
 </html>
