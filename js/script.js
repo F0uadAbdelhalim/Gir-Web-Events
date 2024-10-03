@@ -262,6 +262,28 @@ try {
       e.target.classList.add("btn-primary");
     });
   });
+
+  ////////////////////////////////////////
+  //// settings toggle
+  const settings = document.querySelector(".settings");
+  const settingsBtn = document.querySelector(".settings__btn");
+  const supportContainer = document.querySelector(".support");
+  settingsBtn.addEventListener("click", function () {
+    settings.classList.toggle("appear");
+  });
+
+  settings.addEventListener("click", function (e) {
+    if (e.target.classList.contains("settings__item")) {
+      settings.classList.toggle("appear");
+    } else if (
+      e.target.closest(".support__content") ||
+      e.target.closest(".support__btn")
+    ) {
+      supportContainer.classList.remove("d-none");
+    } else {
+      supportContainer.classList.add("d-none");
+    }
+  });
 } catch (error) {
   console.log(error.message);
 }
@@ -290,6 +312,7 @@ select.addEventListener("change", function (e) {
     });
     companyIdInput.classList.add("d-none");
     companyWebsite.classList.add("d-none");
+    account.classList.add("d-none");
   } else {
     passwordInput.forEach((input) => {
       input.classList.add("d-none");
