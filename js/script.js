@@ -147,7 +147,8 @@ try {
 
   overlay.addEventListener("click", function () {
     overlay.classList.toggle("visually-hidden");
-    overlayContent.classList.toggle("visually-hidden");
+    overlayContent.classList.add("visually-hidden");
+    arrangement.classList.add("visually-hidden");
   });
 
   btnClose.addEventListener("click", function () {
