@@ -126,14 +126,13 @@ try {
   const overlay = document.querySelector(".overlay");
   const overlayContent = document.querySelector(".overlay__content");
   const btnClose = document.querySelector(".close");
-  const addPackage = document.querySelectorAll(".add__package");
+  const addPackage = document.querySelector(".add__package");
   const arrangement = document.querySelector(".arrangemet");
   const btnCloseArrangement = document.querySelector(".close__arrangement");
-  addPackage.forEach((btn) => {
-    btn.addEventListener("click", function () {
-      overlay.classList.toggle("visually-hidden");
-      arrangement.classList.toggle("visually-hidden");
-    });
+
+  addPackage.addEventListener("click", function () {
+    overlay.classList.toggle("visually-hidden");
+    arrangement.classList.toggle("visually-hidden");
   });
 
   btnCloseArrangement.addEventListener("click", function () {
