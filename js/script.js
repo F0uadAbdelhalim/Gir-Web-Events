@@ -336,6 +336,7 @@ select.addEventListener("change", function (e) {
     });
     companyIdInput.classList.add("d-none");
     companyWebsite.classList.add("d-none");
+    account.classList.remove("d-none");
   }
 });
 
