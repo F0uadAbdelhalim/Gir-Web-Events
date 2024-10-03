@@ -314,6 +314,7 @@ body {
 
 .filters {
   width: 200px;
+  left: -45% !important;
 }
 
 .filters_item:hover {
@@ -341,6 +342,9 @@ body {
   }
   .w-165 {
     width: 120% !important;
+  }
+  .filters {
+    left: -121% !important;
   }
 }
 @media only screen and (max-width: 36em) {
