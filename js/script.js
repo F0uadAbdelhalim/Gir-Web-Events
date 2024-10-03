@@ -130,16 +130,6 @@ try {
   const arrangement = document.querySelector(".arrangemet");
   const btnCloseArrangement = document.querySelector(".close__arrangement");
 
-  addPackage.addEventListener("click", function () {
-    overlay.classList.toggle("visually-hidden");
-    arrangement.classList.toggle("visually-hidden");
-  });
-
-  btnCloseArrangement.addEventListener("click", function () {
-    overlay.classList.toggle("visually-hidden");
-    arrangement.classList.toggle("visually-hidden");
-  });
-
   btnStart.addEventListener("click", function () {
     overlay.classList.toggle("visually-hidden");
     overlayContent.classList.toggle("visually-hidden");
@@ -273,15 +263,6 @@ try {
       e.target.classList.add("btn-primary");
     });
   });
-  ////////////////////////////////////////
-  //// filters toggle
-  const filterBtn = document.querySelector(".filter__btn");
-  const filters = document.querySelector(".filters");
-  console.log(filterBtn, filters);
-
-  filterBtn.addEventListener("click", function () {
-    filters.classList.toggle("visually-hidden");
-  });
 
   ////////////////////////////////////////
   //// settings toggle
@@ -303,6 +284,26 @@ try {
     } else {
       supportContainer.classList.add("d-none");
     }
+  });
+
+  ////////////////////////////////////////
+  //// filters toggle
+  const filterBtn = document.querySelector(".filter__btn");
+  const filters = document.querySelector(".filters");
+  console.log(filterBtn, filters);
+
+  filterBtn.addEventListener("click", function () {
+    filters.classList.toggle("visually-hidden");
+  });
+
+  addPackage.addEventListener("click", function () {
+    overlay.classList.toggle("visually-hidden");
+    arrangement.classList.toggle("visually-hidden");
+  });
+
+  btnCloseArrangement.addEventListener("click", function () {
+    overlay.classList.toggle("visually-hidden");
+    arrangement.classList.toggle("visually-hidden");
   });
 } catch (error) {
   console.log(error);
