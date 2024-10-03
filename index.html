@@ -1204,8 +1204,24 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
               </option>
             </select>
           </div>
-          <button class="btn">
+          <button class="btn filter__btn position-relative">
             <img src="imgs/filterlogo.svg" alt="filter" class="img-fluid" />
+            <ul
+              class="p-2 bg-gray position-absolute start-0 rounded-2 filters visually-hidden z-3 list-unstyled"
+            >
+              <h5>Provider Type :</h5>
+              <li class="filters_item">
+                <a href="#" class="btn p-1 text-black-50">All providers</a>
+              </li>
+              <li class="filters_item">
+                <a href="#" class="btn p-1 text-black-50">Company providers</a>
+              </li>
+              <li class="filters_item">
+                <a href="#" class="btn p-1 text-black-50"
+                  >Individual providers</a
+                >
+              </li>
+            </ul>
           </button>
         </div>
         <div class="row gap-4 justify-content-center">

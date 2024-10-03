@@ -312,6 +312,18 @@ body {
   z-index: 10000;
 }
 
+.filters {
+  width: 200px;
+}
+
+.filters_item:hover {
+  background-color: #931158;
+}
+
+.filters_item:hover a {
+  color: white !important;
+}
+
 @media only screen and (max-width: 62em) {
   .navbar-nav .nav-item:not(:last-child) {
     border-right: none;

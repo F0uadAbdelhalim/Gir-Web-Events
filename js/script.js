@@ -225,13 +225,12 @@ try {
   formNav.addEventListener("submit", function (e) {
     e.preventDefault();
     const searchValue = formNavInput.value;
-    console.log(searchValue);
+
     if (searchValue !== "") {
       searchResults.classList.remove("d-none");
       searchEmpty.classList.add("d-none");
       mainContent.classList.add("d-none");
     } else if (searchValue === "") {
-      console.log("cart is empty!!!");
       searchResults.classList.add("d-none");
       searchEmpty.classList.remove("d-none");
       mainContent.classList.add("d-none");
@@ -249,7 +248,7 @@ try {
   ////////////////////////////////////////
   //// toggle vendours
   const vendours = document.querySelector(".vendours");
-  console.log(vendours);
+
   vendours.addEventListener("click", function (e) {
     if (!e.target.classList.contains("col")) return;
     e.target.classList.toggle("btn-primary");
@@ -264,17 +263,24 @@ try {
 
   const hallContainer = document.querySelectorAll(".hall__container");
   const hallInputs = document.querySelectorAll(".hall__input");
-  console.log(hallInputs);
+
   hallContainer.forEach((hall) => {
     hall.addEventListener("click", function (e) {
-      console.log(e.target);
       if (!e.target.classList.contains("hall__input")) return;
       hallInputs.forEach((input) => {
         input.classList.remove("btn-primary");
-        console.log("btn primary removed");
       });
       e.target.classList.add("btn-primary");
     });
+  });
+  ////////////////////////////////////////
+  //// filters toggle
+  const filterBtn = document.querySelector(".filter__btn");
+  const filters = document.querySelector(".filters");
+  console.log(filterBtn, filters);
+
+  filterBtn.addEventListener("click", function () {
+    filters.classList.toggle("visually-hidden");
   });
 
   ////////////////////////////////////////
@@ -299,7 +305,7 @@ try {
     }
   });
 } catch (error) {
-  console.log(error.message);
+  console.log(error);
 }
 
 ////////////////////////////////////////
