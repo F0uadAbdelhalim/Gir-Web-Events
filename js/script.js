@@ -291,6 +291,7 @@ try {
   settings?.addEventListener("click", function (e) {
     if (e.target.classList.contains("settings__item")) {
       settings.classList.toggle("appear");
+      overlay.classList.add("visually-hidden");
     } else if (
       e.target.closest(".support__content") ||
       e.target.closest(".support__btn")
