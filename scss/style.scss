@@ -62,6 +62,10 @@ body {
   z-index: 2;
 }
 
+.bg_rating {
+  background-color: #00000061 !important;
+}
+
 .bg-gray {
   background-color: #ddd;
 }
@@ -370,6 +374,12 @@ body {
   .filters {
     left: -121% !important;
   }
+  .settings {
+    width: 70vw;
+  }
+  .support {
+    width: 70vw;
+  }
 }
 @media only screen and (max-width: 36em) {
   .hero__content {
@@ -389,6 +399,12 @@ body {
   }
   .mb-9 {
     margin-bottom: 20rem !important;
+  }
+  .settings {
+    width: 90vw;
+  }
+  .support {
+    width: 95vw;
   }
 }
 

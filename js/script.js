@@ -151,6 +151,8 @@ try {
     overlay.classList.toggle("visually-hidden");
     overlayContent.classList.add("visually-hidden");
     arrangement.classList.add("visually-hidden");
+    settings.classList.remove("appear");
+    supportContainer.classList.add("d-none");
   });
 
   btnClose?.addEventListener("click", function () {
@@ -283,6 +285,7 @@ try {
   const supportContainer = document.querySelector(".support");
   settingsBtn?.addEventListener("click", function () {
     settings.classList.toggle("appear");
+    overlay.classList.remove("visually-hidden");
   });
 
   settings?.addEventListener("click", function (e) {
