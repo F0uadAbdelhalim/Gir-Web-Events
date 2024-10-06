@@ -222,6 +222,8 @@ try {
   const mainContent = document.querySelector(".main__content");
   const searchResults = document.querySelector(".search__results");
   const searchEmpty = document.querySelector(".search__empty");
+  const searchProviders = document.querySelector(".search__providers");
+  const btnProviders = document.querySelector(".btn__providers");
   const formNav = document.querySelector(".form__nav");
   const formNavInput = document.querySelector(".form__nav--input");
   const homeMain = document.querySelectorAll(".home__main");
@@ -234,11 +236,20 @@ try {
       searchResults.classList.remove("d-none");
       searchEmpty.classList.add("d-none");
       mainContent.classList.add("d-none");
+      searchProviders.classList.add("d-none");
     } else if (searchValue === "") {
       searchResults.classList.add("d-none");
       searchEmpty.classList.remove("d-none");
       mainContent.classList.add("d-none");
+      searchProviders.classList.add("d-none");
     }
+  });
+
+  btnProviders?.addEventListener("click", function () {
+    searchProviders.classList.remove("d-none");
+    searchResults.classList.add("d-none");
+    searchEmpty.classList.add("d-none");
+    mainContent.classList.add("d-none");
   });
 
   homeMain?.forEach((el) => {
@@ -246,6 +257,7 @@ try {
       searchResults.classList.add("d-none");
       searchEmpty.classList.add("d-none");
       mainContent.classList.remove("d-none");
+      searchProviders.classList.add("d-none");
     });
   });
 
@@ -304,12 +316,16 @@ try {
 
   ////////////////////////////////////////
   //// filters toggle
-  const filterBtn = document.querySelector(".filter__btn");
-  const filters = document.querySelector(".filters");
-  console.log(filterBtn, filters);
+  const filterBtn = document.querySelectorAll(".filter__btn");
+  console.log(filterBtn);
+  const filters = document.querySelectorAll(".filters");
 
-  filterBtn?.addEventListener("click", function () {
-    filters.classList.toggle("visually-hidden");
+  filterBtn?.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      filters.forEach((filter) => {
+        filter.classList.toggle("visually-hidden");
+      });
+    });
   });
 } catch (error) {
   console.log(error);
