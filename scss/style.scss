@@ -175,7 +175,7 @@ body {
   height: 33px;
   border-radius: 30rem;
   background-color: #931158;
-  left: 0;
+  left: -10%;
   top: -20%;
   z-index: 3;
 }
@@ -186,6 +186,36 @@ body {
   content: "100$";
 }
 
+// input[type="range"] {
+//   width: 100%;
+//   -webkit-appearance: none;
+//   appearance: none;
+//   background: #ddd;
+//   height: 5px;
+//   border-radius: 5px;
+//   outline: none;
+//   position: relative;
+// }
+
+// /* For WebKit browsers (Chrome, Safari, Edge) */
+// input[type="range"]::-webkit-slider-thumb {
+//   background: transparent; /* Make the thumb transparent */
+//   appearance: none;
+//   outline: none;
+//   border: none;
+//   z-index: 2;
+// }
+
+// /* For Firefox */
+// input[type="range"]::-moz-range-thumb {
+//   background: transparent; /* Make the thumb transparent */
+//   appearance: none;
+//   outline: none;
+//   border: none;
+
+//   z-index: 2;
+// }
+
 .btn-primary-light {
   background-color: #9311588c;
 }
@@ -195,10 +225,10 @@ body {
 }
 
 .circle {
-  content: attr(data-value);
   position: absolute;
-  top: -6px; /* Adjust to move it above */
-
+  top: -90%;
+  // left: -35px;
+  z-index: 0; // development
   width: 33px;
   height: 33px;
   background: #931158;
@@ -208,7 +238,9 @@ body {
   justify-content: center;
   align-items: center;
   transform: translateX(0); /* Will be dynamically updated */
-  transition: transform 0.2s ease;
+}
+input[type="radio"]:checked {
+  background-color: black;
 }
 
 // .my-slider-progress {

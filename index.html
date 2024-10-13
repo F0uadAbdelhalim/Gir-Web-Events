@@ -2531,11 +2531,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                     <span>Corporate Events</span>
                   </div>
                 </div>
-                <div class="spread_dots my-4 d-flex justify-content-center">
-                  <div class="spread_dot bg-primary"></div>
-                  <div class="spread_dot bg-gray"></div>
-                  <div class="spread_dot bg-gray"></div>
-                </div>
+         
                 <span class="text-uppercase d-block text-center my-3">or</span>
                 <div class="describe my-3">
                   <p class="text-capitalize">describe your event</p>
@@ -2549,32 +2545,38 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             </li>
             <li class="splide__slide">
               <div>
-                <h3 class="text-dark">Estimate the number of guests</h3>
+                <h3 class="text-dark mb-5">Estimate the number of guests</h3>
 
                 <div class="container-range--1 position-relative">
                   <div class="range-wrapper position-relative">
-                    <div class="circle" id="circle">1</div>
+                    <output type="number" class="circle" id="output">1</output>
                     <input
                       data-value="1"
                       type="range"
                       min="1"
                       max="500"
-                      value="100"
+                      value="1"
                       class="form-range"
                       id="range"
+                      oninput="output.value = this.value"
                     />
                   </div>
                 </div>
-                <h3 class="text-dark">What is your budget?</h3>
+                <h3 class="text-dark mb-5">What is your budget?</h3>
                 <div class="container-range--2 position-relative">
                   <div class="range-wrapper position-relative">
-                    <div class="circle circle--2" id="circle">1</div>
+                    <output type="number" class="circle circle--2" id="output2"
+                      >1$</output
+                    >
+
                     <input
                       type="range"
                       min="100"
                       max="1000"
-                      value="200"
+                      value="100"
+                      id="range"
                       class="form-range range--2"
+                      oninput="output2.value = this.value+ '$'"
                     />
                   </div>
                 </div>

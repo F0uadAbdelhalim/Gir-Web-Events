@@ -2737,32 +2737,38 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             </li>
             <li class="splide__slide">
               <div>
-                <h3 class="text-dark">Estimate the number of guests</h3>
+                <h3 class="text-dark mb-5">Estimate the number of guests</h3>
 
                 <div class="container-range--1 position-relative">
                   <div class="range-wrapper position-relative">
-                    <div class="circle" id="circle">1</div>
+                    <output type="number" class="circle" id="output">1</output>
                     <input
                       data-value="1"
                       type="range"
                       min="1"
                       max="500"
-                      value="100"
+                      value="1"
                       class="form-range"
                       id="range"
+                      oninput="output.value = this.value"
                     />
                   </div>
                 </div>
-                <h3 class="text-dark">What is your budget?</h3>
+                <h3 class="text-dark mb-5">What is your budget?</h3>
                 <div class="container-range--2 position-relative">
                   <div class="range-wrapper position-relative">
-                    <div class="circle circle--2" id="circle">1</div>
+                    <output type="number" class="circle circle--2" id="output2"
+                      >1$</output
+                    >
+
                     <input
                       type="range"
                       min="100"
                       max="1000"
-                      value="200"
+                      value="100"
+                      id="range"
                       class="form-range range--2"
+                      oninput="output2.value = this.value+ '$'"
                     />
                   </div>
                 </div>
@@ -2835,44 +2841,6 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                   >
                     Other
                   </button>
-                </div>
-              </div>
-            </li>
-            <li class="splide__slide">
-              <div>
-                <h3 class="text-dark mb-5">
-                  You are in guest mode and not logged in.
-                </h3>
-                <div class="d-flex flex-column align-items-center">
-                  <a
-                    href="#"
-                    class="btn btn-primary text-white mb-3 d-block rounded-5 text-center w-75"
-                    >log in</a
-                  >
-                  <a
-                    href="signupuser.html"
-                    class="btn btn-primary text-white mb-3 d-block rounded-5 text-center w-75"
-                    >sign up</a
-                  >
-                </div>
-                <div>
-                  <p class="lead text-center text-black-50 fw-medium fs-14">
-                    You can also log in using your account with:
-                  </p>
-                  <div class="social__link d-flex justify-content-center gap-3">
-                    <a href="#" class="p-2 bg-gray"
-                      ><img src="imgs/xico.svg" alt="facebook"
-                    /></a>
-                    <a href="#" class="p-2 bg-gray"
-                      ><img src="imgs/appleico.svg" alt="google"
-                    /></a>
-                    <a href="#" class="p-2 bg-gray"
-                      ><img src="imgs/Google.svg" alt="facebook"
-                    /></a>
-                    <a href="#" class="p-2 bg-gray"
-                      ><img src="imgs/teamsico.svg" alt="google"
-                    /></a>
-                  </div>
                 </div>
               </div>
             </li>
